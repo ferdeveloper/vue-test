@@ -1,5 +1,6 @@
 .app {
   max-width: 600px;
+  margin: 0 auto;
 }
 
 .CardList {
@@ -9,13 +10,12 @@
 }
 
 .Card {
-  max-width: 33%;
+  max-width: 200px;
   width: 33vw;
-  max-height: 33%;
+  max-height: 200px;
   height: 33vw;
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-bottom: 3px;
   position: relative;
 }
 
