@@ -4,15 +4,28 @@
     <title>Vue Test</title>
   </head>
   <body>
-    
     <h1>Vue Test</h1>
-    <div id="app">
-      {{ info }}
+    <div
+      id="app"
+      class="app"
+    >
+      <div class="CardList">
+          <div
+            v-for="data in info"
+            class="Card"
+            v-bind:style="{ 'background-image': 'url(' + data.images.sm + ')' }"
+          >
+            <div class="Card-footer">
+              {{ data.name }}
+            </div>
+          </div>
+        </div>
     </div>
     
   </body>
   </html>
   
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> {# Used for request #}
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="app.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">

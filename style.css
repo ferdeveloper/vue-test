@@ -1,0 +1,29 @@
+.app {
+  max-width: 600px;
+}
+
+.CardList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Card {
+  max-width: 33%;
+  width: 33vw;
+  max-height: 33%;
+  height: 33vw;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 3px;
+  position: relative;
+}
+
+.Card-footer {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 10px;
+  position: absolute;
+  width: calc(100% - 20px);
+  bottom: 0;
+}

@@ -1,10 +1,3 @@
-// var app = new Vue({
-//   el: '#app',
-//   data: {
-//     message: 'Hello Vue!'
-//   }
-// });
-
 new Vue({
   el: '#app',
   data () {
@@ -14,7 +7,7 @@ new Vue({
   },
   mounted () {
     axios
-      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-      .then(response => (this.info = response))
+      .get('https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json')
+      .then(response => (this.info = response.data))
   }
 })
