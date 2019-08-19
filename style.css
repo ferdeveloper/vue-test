@@ -19,6 +19,16 @@
   position: relative;
 }
 
+.Card--expanded {
+  max-width: 600px;
+  width: 100vw;
+  max-height: 600px;
+  height: 100vw;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
 .Card-footer {
   background-color: rgba(0, 0, 0, 0.3);
   color: white;

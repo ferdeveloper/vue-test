@@ -8,23 +8,35 @@
       id="app"
       class="app"
     >
-      <div class="CardList">
+      <div
+        class="CardList"
+        >
           <div
             v-for="data in info"
-            class="Card"
-            v-bind:style="{ 'background-image': 'url(' + data.images.sm + ')' }"
           >
-            <div class="Card-footer">
-              {{ data.name }}
+            <div
+              v-bind:style="{ 'background-image': 'url(' + data.images.sm + ')' }"
+              v-bind:class="[isExpanded ? 'Card--expanded' : 'Card']"
+              @click="toggleClass()"
+            >
+              <div class="Card-footer">
+                {{ data.name }}
+                <p v-if="isExpanded">
+                  {{ data.appearance.gender }}
+                </p>
+                <p v-if="isExpanded">
+                  {{ data.appearance.race }}
+                </p>
+              </div>
             </div>
           </div>
         </div>
     </div>
-    
   </body>
   </html>
   
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
   <script src="app.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
